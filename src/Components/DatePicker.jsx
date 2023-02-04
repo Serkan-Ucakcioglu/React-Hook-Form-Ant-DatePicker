@@ -5,9 +5,6 @@ import dayjs from "dayjs";
 
 function DatePickers(props) {
   const { field, fieldState } = useController(props);
-  console.log(field, "field");
-  console.log(fieldState, "fieldState");
-
   return (
     <div className="flex flex-col">
       <DatePicker
