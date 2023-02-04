@@ -6,7 +6,7 @@ function App() {
   const { control, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
+    alert(JSON.stringify(data));
   };
   return (
     <div className="App flex flex-col items-center">
