@@ -11,7 +11,6 @@ function DatePickers(props) {
         placeholder={props.placeholder}
         status={fieldState.error ? "error" : undefined}
         ref={field.ref}
-        showTime={true}
         name={field.name}
         onBlur={field.onBlur}
         value={field.value ? dayjs(field.value) : null}
