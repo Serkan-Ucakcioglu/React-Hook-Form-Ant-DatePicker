@@ -1,7 +1,26 @@
 import React from "react";
+import { useController } from "react-hook-form";
+import { DatePicker } from "antd";
+import dayjs from "dayjs";
 
-function DatePicker() {
-  return <div></div>;
+function DatePickers(props) {
+  const { field, fieldState } = useController(props);
+
+  return (
+    <>
+      <DatePicker
+        placeholder={props.placeholder}
+        status={fieldState.error ? "error" : undefined}
+        ref={field.ref}
+        name={field.name}
+        onBlur={field.onBlur}
+        value={field.value ? dayjs(field.value) : null}
+        onChange={(date) => {
+          field.onChange(date ? date.valueOf() : null);
+        }}
+      />
+    </>
+  );
 }
 
-export default DatePicker;
+export default DatePickers;
