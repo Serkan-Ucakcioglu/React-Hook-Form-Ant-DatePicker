@@ -7,7 +7,7 @@ function DatePickers(props) {
   const { field, fieldState } = useController(props);
 
   return (
-    <>
+    <div className="flex flex-col">
       <DatePicker
         placeholder={props.placeholder}
         status={fieldState.error ? "error" : undefined}
@@ -19,7 +19,10 @@ function DatePickers(props) {
           field.onChange(date ? date.valueOf() : null);
         }}
       />
-    </>
+      <span className="text-red-500 text-left">
+        {fieldState?.error?.message}
+      </span>
+    </div>
   );
 }
 
