@@ -8,6 +8,7 @@ function DatePickers(props) {
   return (
     <div className="flex flex-col">
       <DatePicker
+        className="h-14"
         placeholder={props.placeholder}
         status={fieldState.error ? "error" : undefined}
         ref={field.ref}
