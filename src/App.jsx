@@ -10,27 +10,30 @@ function App() {
   };
   return (
     <div className="App flex flex-col items-center">
-      <form
-        onSubmit={handleSubmit(onSubmit)}
-        className="flex flex-col gap-3 w-[400px]"
-      >
-        <DatePickers
-          placeholder="start-date"
-          name="stardate"
-          rules={{ required: "required" }}
-          control={control}
-        />
-        <DatePickers
-          placeholder="end-date"
-          name="enddate"
-          rules={{ required: "required" }}
-          control={control}
-        />
-        <input
-          type="submit"
-          className="h-10 bg-indigo-600 border m-auto border-indigo-600 cursor-pointer text-white rounded-lg w-20"
-        />
-      </form>
+      <div className="container w-[360px] mx-4">
+        {" "}
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="flex flex-col gap-3  mx-4"
+        >
+          <DatePickers
+            placeholder="start-date"
+            name="stardate"
+            rules={{ required: "required" }}
+            control={control}
+          />
+          <DatePickers
+            placeholder="end-date"
+            name="enddate"
+            rules={{ required: "required" }}
+            control={control}
+          />
+          <input
+            type="submit"
+            className="h-10 bg-indigo-600 border m-auto border-indigo-600 cursor-pointer text-white rounded-lg w-20"
+          />
+        </form>
+      </div>
     </div>
   );
 }
