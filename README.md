@@ -1,4 +1,4 @@
-# ReactHookForm-Ant-DatePicker
+# React-Hook-Form-Ant-DatePicker Control
 <img width="653" alt="image" src="https://user-images.githubusercontent.com/98692987/216765442-cfcfa242-ac74-45cc-a097-24ede65b1e74.png">
 
 <img width="712" alt="image" src="https://user-images.githubusercontent.com/98692987/216765448-0e7c5ab3-f365-4d51-abd7-ba14fd2a8822.png">
