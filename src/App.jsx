@@ -6,7 +6,10 @@ function App() {
   const { control, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
-    alert(JSON.stringify(data));
+    const { stardate, enddate } = data;
+    const start = new Date(stardate).toISOString();
+    const end = new Date(enddate).toISOString();
+    alert(JSON.stringify({ startDate: start, endDate: end }));
   };
   return (
     <div className="App flex flex-col items-center">
